@@ -1,0 +1,288 @@
+%!Adobe-FontList 1.25
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/AdobeFnt25.lst
+FileLength:6477
+FileModTime:799688328
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPNeueMachina-Light
+FamilyName:PP Neue Machina
+StyleName:Light
+MenuName:PP Neue Machina Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:PP Neue Machina Light
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/PPNeueMachina-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:57352
+FileModTime:657123951
+NameArray:0,Mac,4,PP Neue Machina Light
+NameArray:0,Win,1,PP Neue Machina Light
+NameArray:0,Win,16,PP Neue Machina
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPNeueMachina-Regular
+FamilyName:PP Neue Machina
+StyleName:Regular
+MenuName:PP Neue Machina
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:PP Neue Machina Regular
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/PPNeueMachina-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:60264
+FileModTime:657123951
+NameArray:0,Mac,4,PP Neue Machina Regular
+NameArray:0,Win,1,PP Neue Machina
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPNeueMachina-Ultrabold
+FamilyName:PP Neue Machina
+StyleName:Ultrabold
+MenuName:PP Neue Machina Ultrabold
+StyleBits:0
+WeightClass:800
+WidthClass:5
+AngleClass:0
+FullName:PP Neue Machina Ultrabold
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/PPNeueMachina-Ultrabold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:61032
+FileModTime:657123951
+NameArray:0,Mac,4,PP Neue Machina Ultrabold
+NameArray:0,Win,1,PP Neue Machina Ultrabold
+NameArray:0,Win,16,PP Neue Machina
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPNeueMachina-Ultralight
+FamilyName:PP Neue Machina
+StyleName:Ultralight
+MenuName:PP Neue Machina Ultralight
+StyleBits:0
+WeightClass:200
+WidthClass:5
+AngleClass:0
+FullName:PP Neue Machina Ultralight
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/PPNeueMachina-Ultralight.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:57600
+FileModTime:657123951
+NameArray:0,Mac,4,PP Neue Machina Ultralight
+NameArray:0,Win,1,PP Neue Machina Ultralight
+NameArray:0,Win,16,PP Neue Machina
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPNeueMontreal-Bold
+FamilyName:PP Neue Montreal
+StyleName:Bold
+MenuName:PP Neue Montreal
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:PP Neue Montreal Bold
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/PPNeueMontreal-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:55332
+FileModTime:654192802
+NameArray:0,Mac,4,PP Neue Montreal Bold
+NameArray:0,Win,1,PP Neue Montreal
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPNeueMontreal-Book
+FamilyName:PP Neue Montreal
+StyleName:Book
+MenuName:PP Neue Montreal Book
+StyleBits:0
+WeightClass:375
+WidthClass:5
+AngleClass:0
+FullName:PP Neue Montreal Book
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/PPNeueMontreal-Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:54908
+FileModTime:654192790
+NameArray:0,Mac,4,PP Neue Montreal Book
+NameArray:0,Win,1,PP Neue Montreal Book
+NameArray:0,Win,16,PP Neue Montreal
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPNeueMontreal-Italic
+FamilyName:PP Neue Montreal
+StyleName:Italic
+MenuName:PP Neue Montreal
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:PP Neue Montreal Italic
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/PPNeueMontreal-Italic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:54664
+FileModTime:654192794
+NameArray:0,Mac,4,PP Neue Montreal Italic
+NameArray:0,Win,1,PP Neue Montreal
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PPNeueMontreal-Regular
+FamilyName:PP Neue Montreal
+StyleName:Regular
+MenuName:PP Neue Montreal
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:PP Neue Montreal
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/PPNeueMontreal-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:53860
+FileModTime:654192792
+NameArray:0,Mac,4,PP Neue Montreal
+NameArray:0,Win,1,PP Neue Montreal
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Platform-Medium
+FamilyName:Platform
+StyleName:Medium
+MenuName:Platform Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Platform Medium
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/Platform-Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:119580
+FileModTime:767280085
+NameArray:0,Mac,4,Platform Medium
+NameArray:0,Win,1,Platform Medium
+NameArray:0,Win,16,Platform
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Platform-Regular
+FamilyName:Platform
+StyleName:Regular
+MenuName:Platform Regular
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Platform
+WritingScript:Roman
+OutlineFileName:/Volumes/Ghost Boo/b. David Olem/7. Prod/260329_Layout Folder/Document fonts/Platform-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+hasSBIX:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:117736
+FileModTime:767280087
+NameArray:0,Mac,18,Platform Regular
+NameArray:0,Mac,4,Platform
+NameArray:0,Win,1,Platform Regular
+NameArray:0,Win,16,Platform
+%EndFont
+
