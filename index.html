@@ -273,13 +273,13 @@
       }
     }
 
-    /* Mobile: image flows below content */
     @media (max-width: 600px) {
       .bg-cover {
         position: relative;
         width: 100%;
         height: auto;
       }
+
       .bg-cover img {
         width: 100%;
         height: auto;
@@ -298,6 +298,33 @@
       .page {
         min-height: unset;
       }
+
+      /* Mobile-only collapsed text */
+      .body-text.collapsed {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .read-more-toggle {
+        display: inline-block;
+        margin-top: -1.5rem;
+        margin-bottom: 2rem;
+        font-family: 'Platform-Regular', sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #89d49e;
+        text-decoration: none;
+      }
+    }
+
+    /* Hide read more on desktop */
+    @media (min-width: 601px) {
+      .read-more-toggle {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -314,7 +341,7 @@
 
         <div class="divider"></div>
 
-        <p class="body-text collapsed" id="book-description">
+        <p class="body-text" id="book-description">
           An evidence-based interactive Skills book to reduce stress, build emotional resilience, and connect with positive moments in your life. Blending personal stories, reflective exercises, and journaling prompts, this illustrated guide feels more like a conversation than reading a traditional book. Whether you're new to emotional wellness tools or looking for a fresh way to deepen your practice, Seeing the Whole of the Moon helps you learn gently, visually, and at your own pace.
         </p>
 
@@ -346,6 +373,18 @@
 <script>
   const toggle = document.getElementById('read-more-toggle');
   const description = document.getElementById('book-description');
+
+  function setupMobileCollapse() {
+    if (window.innerWidth <= 600) {
+      description.classList.add('collapsed');
+    } else {
+      description.classList.remove('collapsed');
+    }
+  }
+
+  setupMobileCollapse();
+
+  window.addEventListener('resize', setupMobileCollapse);
 
   toggle.addEventListener('click', function (e) {
     e.preventDefault();
