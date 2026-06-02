@@ -272,7 +272,46 @@
         transform: translateY(0);
       }
     }
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
 
+    .slide {
+      position: absolute;
+      top: 0; right: 0;
+      width: auto;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide-dots {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 2rem;
+      display: flex;
+      gap: 8px;
+      z-index: 2;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.35);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .dot.active {
+      background: #89d49e;
+    }
     @media (max-width: 600px) {
       html,
       body {
@@ -381,12 +420,59 @@
   </div>
    <!-- Desktop: fixed full-screen background -->
   <div class="bg-cover">
-    <img src="images/Cover-with-text.png" alt="Seeing the Whole of the Moon Cover Art">
+    <div class="slideshow">
+      <img src="images/Cover-with-text.png" alt="Cover Art" class="slide active">
+      <img src="images/Contents-1.jpg" alt="Table of Contents 1" class="slide">
+      <img src="images/Contents-2.jpg" alt="Table of Contents 2" class="slide">
+      <img src="images/Page-07.jpg" alt="Introduction" class="slide">
+      <img src="images/Page-17.jpg" alt="Chapter 2 - Taking in the Positive" class="slide">
+      <img src="images/Page-19.jpg" alt="Chapter 2 - Meditation Flow" class="slide">
+      <img src="images/Page-28.jpg" alt="Chapter 4 - Practiciing Gratitude" class="slide">
+      <img src="images/Page-30.jpg" alt="Chapter 5 - Mindful problem solving steps" class="slide">
+      <img src="images/Page-31.jpg" alt="Chapter 5 - Mindful problem solving steps continued" class="slide">
+    </div>
+    <div class="slide-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </div>
   <footer>
     <p class="copyright">&copy; 2026 Seeing the Whole of the Moon. All rights reserved.</p>
   </footer>
 <script>
+  // Slideshow
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let current = 0;
+
+  function goToSlide(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  // Auto-advance every 5 seconds
+  let timer = setInterval(() => goToSlide(current + 1), 5000);
+
+  // Click dots to navigate
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      goToSlide(i);
+      timer = setInterval(() => goToSlide(current + 1), 5000);
+    });
+  });
+
+  // Keep your existing read-more toggle script below this
   const toggle = document.getElementById('read-more-toggle');
   const description = document.getElementById('book-description');
 
