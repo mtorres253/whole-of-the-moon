@@ -272,32 +272,45 @@
         transform: translateY(0);
       }
     }
-    .slideshow {
+
+    .slideshow-wrapper {
       position: relative;
       width: 100%;
       height: 100%;
     }
 
+    .slideshow {
+      position: relative;
+      width: calc(100vh * 0.75);
+      height: 100%;
+    }
+
     .slide {
       position: absolute;
-      top: 0; right: 0;
+      top: 0;
+      right: 0;
       width: auto;
       height: 100%;
       opacity: 0;
       transition: opacity 1.2s ease;
     }
 
-    .slide.active {
-      opacity: 1;
-    }
-
     .slide-dots {
-      position: fixed;
+      position: absolute;
       bottom: 1.5rem;
-      right: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
       gap: 8px;
-      z-index: 2;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.45);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    .slide.active {
+      opacity: 1;
     }
 
     .dot {
@@ -314,8 +327,7 @@
     }
 
     @media (max-width: 600px) {
-      html,
-      body {
+      html, body {
         height: auto;
         min-height: 100%;
       }
@@ -342,34 +354,27 @@
       }
 
       .bg-cover {
-        position: static;
+        position: relative;  /* KEY: gives dots an anchor with real height */
         display: block;
         width: 100%;
         height: auto;
         margin-top: 1rem;
       }
 
-      .bg-cover img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-
-      footer {
+      .slideshow-wrapper {
         position: relative;
-        z-index: 2;
-        clear: both;
-        margin-top: 0rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        height: auto;
+        padding-bottom: 0;
       }
 
       .slideshow {
-        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        padding-bottom: 133%; /* 4:3 portrait ratio */
-        height: 0;
+        height: 100%;
       }
 
       .slide {
@@ -379,19 +384,40 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0;
-        transition: opacity 1.2s ease;
-      }
-
-      .slide.active {
-        opacity: 1;
       }
 
       .slide-dots {
-        position: static;
+        position: absolute;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.45);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        z-index: 10;
+        pointer-events: auto;
+        white-space: nowrap;
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        min-width: 6px;
+        flex-shrink: 0;
+        border-radius: 50%;
+      }
+
+      footer {
+        position: relative;
+        z-index: 2;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 1rem;
       }
 
       .read-more-toggle {
@@ -453,27 +479,29 @@
   </div>
    <!-- Desktop: fixed full-screen background -->
   <div class="bg-cover">
-    <div class="slideshow">
-      <img src="images/Cover-with-text.png" alt="Cover Art" class="slide active">
-      <img src="images/Contents-1.jpg" alt="Table of Contents 1" class="slide">
-      <img src="images/Contents-2.jpg" alt="Table of Contents 2" class="slide">
-      <img src="images/Page-07.jpg" alt="Introduction" class="slide">
-      <img src="images/Page-17.jpg" alt="Chapter 2 - Taking in the Positive" class="slide">
-      <img src="images/Page-19.jpg" alt="Chapter 2 - Meditation Flow" class="slide">
-      <img src="images/Page-28.jpg" alt="Chapter 4 - Practiciing Gratitude" class="slide">
-      <img src="images/Page-30.jpg" alt="Chapter 5 - Mindful problem solving steps" class="slide">
-      <img src="images/Page-31.jpg" alt="Chapter 5 - Mindful problem solving steps continued" class="slide">
-    </div>
-    <div class="slide-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+    <div class="slideshow-wrapper">
+      <div class="slideshow">
+        <img src="images/Cover-with-text.png" alt="Cover Art" class="slide active">
+        <img src="images/Contents-1.jpg" alt="Table of Contents 1" class="slide">
+        <img src="images/Contents-2.jpg" alt="Table of Contents 2" class="slide">
+        <img src="images/Page-07.jpg" alt="Introduction" class="slide">
+        <img src="images/Page-17.jpg" alt="Chapter 2 - Taking in the Positive" class="slide">
+        <img src="images/Page-19.jpg" alt="Chapter 2 - Meditation Flow" class="slide">
+        <img src="images/Page-28.jpg" alt="Chapter 4 - Practiciing Gratitude" class="slide">
+        <img src="images/Page-30.jpg" alt="Chapter 5 - Mindful problem solving steps" class="slide">
+        <img src="images/Page-31.jpg" alt="Chapter 5 - Mindful problem solving steps continued" class="slide">
+      </div>
+      <div class="slide-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
     </div>
   </div>
   <footer>
