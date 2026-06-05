@@ -550,8 +550,10 @@
   function setupMobileCollapse() {
     if (window.innerWidth <= 600) {
       description.classList.add('collapsed');
+      toggle.textContent = "Read More";
     } else {
       description.classList.remove('collapsed');
+      toggle.textContent = "Show Less"
     }
   }
 
