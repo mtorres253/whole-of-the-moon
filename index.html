@@ -246,6 +246,65 @@
       color: rgba(255, 255, 255, 0.8);
     }
 
+    /* Contact block */
+    .contact {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 153, 119, 0.25);
+      opacity: 0;
+      animation: fadeUp 0.9s ease forwards 1.1s;
+    }
+
+    .contact h2 {
+      font-family: 'PPNeueMachina-InktrapRegular', sans-serif;
+      font-weight: 400;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .contact ul {
+      list-style: none;
+    }
+
+    .contact li {
+      font-family: 'Platform-Regular', sans-serif;
+      font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact .label {
+      display: inline-block;
+      min-width: 5.5rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ffb8a0;
+    }
+
+    .contact a {
+      color: #89d49e;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(137, 212, 158, 0.35);
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .contact a:hover {
+      color: #a8e0b8;
+      border-color: #a8e0b8;
+    }
+
+    /* Applied by script on mobile, when the block moves below the slideshow */
+    .contact.contact-below {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      padding: 2rem 6vw 1rem;
+      border-top: 0;
+    }
+
     /* Footer */
     footer {
       position: relative;
@@ -484,6 +543,20 @@
           </a>
           <p class="price-note">$19.00 + tax &amp; shipping</p>
         </div>
+
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact the author</h2>
+          <ul>
+            <li>
+              <span class="label">Email</span>
+              <a href="mailto:david.olem@gmail.com">david.olem@gmail.com</a>
+            </li>
+            <li>
+              <span class="label">Website</span>
+              <a href="https://davidolem.com" target="_blank" rel="noopener noreferrer">davidolem.com</a>
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
   </div>
@@ -560,6 +633,29 @@
   setupMobileCollapse();
 
   window.addEventListener('resize', setupMobileCollapse);
+
+  // Contact block: one copy in the markup. On mobile it moves below the
+  // slideshow (just before the footer); on desktop it returns to the text panel.
+  const contact = document.getElementById('contact');
+  const contactHome = contact.parentElement;
+  const footerEl = document.querySelector('footer');
+
+  function placeContact() {
+    if (window.innerWidth <= 600) {
+      if (contact.parentElement !== footerEl.parentElement) {
+        footerEl.parentElement.insertBefore(contact, footerEl);
+      }
+      contact.classList.add('contact-below');
+    } else {
+      if (contact.parentElement !== contactHome) {
+        contactHome.appendChild(contact);
+      }
+      contact.classList.remove('contact-below');
+    }
+  }
+
+  placeContact();
+  window.addEventListener('resize', placeContact);
 
   toggle.addEventListener('click', function (e) {
     e.preventDefault();
